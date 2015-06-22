@@ -403,6 +403,9 @@ namespace TemplateWizards
             {
                 //Don't add existing unit test projects to the list of projects to unit test against
                 bool isUnitTestProject = false;
+
+                if (string.IsNullOrEmpty(project.FullName)) continue;
+
                 var settingsPath = Path.GetDirectoryName(project.FullName);
                 if (File.Exists(settingsPath + "\\Properties\\settings.settings"))
                 {
