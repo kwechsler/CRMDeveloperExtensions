@@ -1,0 +1,7 @@
+﻿// C#
+[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+"Dynamics CRM"="$PackageFolder$\Snippets\CSharp\Dynamics CRM"
+
+// JavaScript
+[$RootKey$\Languages\CodeExpansions\JavaScript\Paths]
+"Dynamics CRM"="$PackageFolder$\Snippets\JavaScript\Dynamics CRM"

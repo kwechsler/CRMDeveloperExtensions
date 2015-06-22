@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{A4FDB41F-E97D-42FC-BF45-E762A4F87F7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRMDeveloperExtensions</RootNamespace>
+    <AssemblyName>CRMDeveloperExtensions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Label="TemplateBuilder">
+    <TemplateBuilderTargets Condition=" '$(TemplateBuilderTargets)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\TemplateBuilder.1.0.3.59-beta\tools\ligershark.templates.targets ))</TemplateBuilderTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ItemTemplates\Code\Plugin Class\PluginClass1.cs" />
+    <Compile Include="ItemTemplates\Code\Plugin NUnit Integration Test\NIntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Plugin Integration Test\IntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Plugin NUnit Test\NUnitTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Plugin Unit Test\UnitTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow Class\WorkflowClass1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow NUnit Integration Test\NIntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow Integration Test\IntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow NUnit Test\NUnitTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow Unit Test\UnitTest1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMPluginNUnitIntegrationTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMPluginNUnitTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMPluginIntegrationTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowNUnitIntegrationTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowNUnitTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowIntegrationTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowUnitTestWithMock.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowUnitTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMPluginUnitTestWithMock.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMPluginUnitTest.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowOutputParameter.snippet" />
+    <None Include="Snippets\CSharp\Dynamics CRM\CRMWorkflowInputParameter.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\FireOnChange.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetIsPartyList.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetSubmitMode.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetSelectedOption.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetRequiredLevel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetPrecision.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetParent.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetOptions.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetOption.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetAttributeName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetMin.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetMaxLength.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetMax.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetUserPrivilege.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetText.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\SetSubmitMode.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\SetRequiredLevel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\RemoveOnChange.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetValue.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetInitialValue.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetFormat.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetAttributeType.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\GetIsDirty.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\ForEachSections.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\ForEachTabs.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\ForEachFormSelectors.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\ForEachNavigationItems.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\ForEachAttributes.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\ForEachControls.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetSections.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetSectionsCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetTabsCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetTabs.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetFormSelectors.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetFormSelectorsCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetNavigationItemsCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetNavigationItems.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetAttributes.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetAttributesCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetControlsCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Collection\GetControls.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetIsAutoSaveEnabled.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetFormFactor.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetClientState.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetClient.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetTimeZoneOffsetMinutes.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetUserName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\PrependOrgName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\IsOutlookOnline.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\IsOutlookClient.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetUserRoles.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetUserLcid.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetUserId.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetQueryStringParameters.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetOrgUniqueName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetOrgLcid.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetCurrentTheme.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Context\GetClientUrl.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\AddCustomFilter.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\AddCustomView.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\RemovePreSearch.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\AddPreSearch.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\ClearNotification.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetNotification.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetShowTime.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetShowTime.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetVisible.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetSrc.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetLabel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetFocus.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetDisabled.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetDefaultView.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetInitialUrl.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetObject.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\SetData.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\RemoveOption.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\AddOnSelection.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\SetSearchQuery.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\GetSelectedResult.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\GetSearchQuery.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\RemoveOnSelection.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\RemoveOnResultOpened.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\AddOnResultOpened.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Parature KB\GetParatureControl.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Save\PreventDefault.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Save\IsDefaultPrevented.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Save\GetSaveMode.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetGridControl.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\SetGridCurrentView.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRowEntityPrimaryAttributeValue.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRowEntityId.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRowEntityReference.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRowEntityName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRowEntity.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRowData.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetTotalRecordCount.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetSelectedRows.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetRows.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetGridCurrentView.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\IsViewSelectorVisible.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\RemoveGridOnLoad.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetViewSelector.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetGrid.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\GetGridEntityName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\AddGridOnLoad.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Subgrid\Refresh.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetVisible.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetSrc.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetParent.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetLabel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetDisabled.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetDefaultView.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetData.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetControlType.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\GetAttribute.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\ClearOptions.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Control\AddOption.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\GetPrimaryAttributeValue.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\Save.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\RemoveOnSave.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\GetIsDirty.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\GetId.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\GetEntityName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\GetDataXml.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Data\AddOnSave.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\SetValue.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Attribute\AddOnChange.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Form Selector\Navigate.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Form Selector\GetFormLabel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Form Selector\GetFormId.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\SetTabVisible.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\GetTabVisible.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\SetTabFocus.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\SetTabLabel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\GetTabLabel.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\GetTabParent.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\GetTabName.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\SetDisplayState.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Tab\GetDisplayState.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\ClearFormNotification.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\SetFormNotification.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\RefreshRibbon.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\GetViewPortWidth.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\GetViewPortHeight.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\GetFormType.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\GetCurrentControl.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\UI\Close.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Utility\IsActivityType.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Utility\ConfirmDialog.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Utility\AlertDialog.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Utility\OpenQuickCreate.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Utility\OpenWebResource.snippet" />
+    <None Include="Snippets\JavaScript\Dynamics CRM\Utility\OpenEntityForm.snippet" />
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\template-builder.props">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="TemplateBuilder">
+      <HintPath>..\packages\TemplateBuilder.1.0.3.59-beta\lib\TemplateBuilder.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <TemplateReference Include="CRMPluginProject.csproj">
+      <PathToProject>../Project%20Templates/CRMPluginProject/CRMPluginProject.csproj</PathToProject>
+    </TemplateReference>
+    <TemplateReference Include="CRMPluginUnitTestProject.csproj">
+      <PathToProject>../Project%20Templates/CRMPluginUnitTestProject/CRMPluginUnitTestProject.csproj</PathToProject>
+    </TemplateReference>
+    <TemplateReference Include="CRMSimpleConsole.csproj">
+      <PathToProject>../Project%20Templates/CRMSimpleConsole/CRMSimpleConsole.csproj</PathToProject>
+    </TemplateReference>
+    <TemplateReference Include="CRMWebResourceProject.csproj">
+      <PathToProject>../Project%20Templates/CRMWebResourceProject/CRMWebResourceProject.csproj</PathToProject>
+    </TemplateReference>
+    <TemplateReference Include="CRMWorkflowProject.csproj">
+      <PathToProject>../Project%20Templates/CRMWorkflowProject/CRMWorkflowProject.csproj</PathToProject>
+    </TemplateReference>
+    <TemplateReference Include="CRMWorkflowUnitTestProject.csproj">
+      <PathToProject>../Project%20Templates/CRMWorkflowUnitTestProject/CRMWorkflowUnitTestProject.csproj</PathToProject>
+    </TemplateReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ItemTemplates\Code\Plugin NUnit Integration Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin NUnit Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Plugin NUnit Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin NUnit Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow NUnit Integration Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow NUnit Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow NUnit Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow NUnit Test\icon.png" />
+    <Content Include="ItemTemplates\Web\HTML Web Resource\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\Definitions\CSharp.vstemplate" />
+    <Content Include="snippets.pkgdef">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ItemTemplates\Web\HTML Web Resource\Definitions\Web.csharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\HTML Web Resource\icon.png" />
+    <Content Include="ItemTemplates\Web\HTML Web Resource\My_Html1.html" />
+    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\Definitions\Web.csharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\icon.png" />
+    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\My_Script1.js" />
+    <Content Include="ItemTemplates\Code\Plugin Class\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin Class\icon.png" />
+    <Content Include="ItemTemplates\Code\Plugin Integration Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Plugin Unit Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin Unit Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow Class\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow Class\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow Integration Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow Unit Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow Unit Test\icon.png" />
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="sw-file-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemplateMenuCommands\TemplateMenuCommands.csproj">
+      <Project>{3BBF0AA0-B8E1-489D-B155-DA570E1B8433}</Project>
+      <Name>TemplateMenuCommands</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateWizards\TemplateWizards.csproj">
+      <Project>{4f1d342a-3f47-485c-888f-b85e54a8662b}</Project>
+      <Name>TemplateWizards</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserOptions\UserOptions.csproj">
+      <Project>{75D1747A-598A-48F9-927C-381BEDC355E6}</Project>
+      <Name>UserOptions</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(TemplateBuilderTargets)" Condition="Exists('$(TemplateBuilderTargets)')" Label="TemplateBuilder" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

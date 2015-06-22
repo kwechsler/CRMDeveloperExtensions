@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add Custom Filter (6.0+)</Title>
+      <Shortcut>CRMAddCustomFilter</Shortcut>
+      <Description>Use to add filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an “AND” condition.</Description>
+      <HelpUrl>https://msdn.microsoft.com/en-us/library/gg334266.aspx#BKMK_addCustomFilter</HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Control</Keyword>
+        <Keyword>2013</Keyword>
+        <Keyword>2015</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="JavaScript">
+        <![CDATA[var entityName = "account";
+        var filter = "<filter type='and'>" +
+                     "<condition attribute='name' operator='eq' value='test' />" +
+                     "</filter>";
+
+        Xrm.Page.getControl("fieldname").addCustomFilter(filter, entityName);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

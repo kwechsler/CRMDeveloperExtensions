@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>CRM Workflow Unit Test Project</Name>
+    <Description>Dynamics CRM Workflow Unit Test Project</Description>
+    <DefaultName>CRMWorkflowUnitTestProject.Tests</DefaultName>
+
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>sw-file-icon.png</Icon>
+
+    <!-- Indicates how many parent folders this item template should appear in -->
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="CRMWorkflowUnitTestProject.csproj" File="CRMWorkflowUnitTestProject.csproj" ReplaceParameters="true">
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+    <FullClassName>TemplateWizards.VersionWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <!--Valid values are Plug-in or Workflow or Item-->
+    <CRMProjectType>Workflow</CRMProjectType>
+    <NeedsClient>True</NeedsClient>
+    <IsUnitTest>True</IsUnitTest>
+    <IsUnitTestItem>False</IsUnitTestItem>
+  </WizardData>
+</VSTemplate>

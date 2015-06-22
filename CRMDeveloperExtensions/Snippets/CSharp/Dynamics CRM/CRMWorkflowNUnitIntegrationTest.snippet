@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Workflow NUnit Integration Test</Title>
+      <Shortcut>CRMWFUT</Shortcut>
+      <Description>Creates a Dynamics CRM workflow NUnit integration test.</Description>
+      <HelpUrl></HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Unit Test</Keyword>
+        <Keyword>Workflow</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[[Test]
+        public void TestMethod1()
+        {
+	          //Target
+	          Entity targetEntity = new Entity { LogicalName = "name", Id = Guid.NewGuid() };
+
+	          //Input parameters
+	          var inputs = new Dictionary<string, object> 
+	          {
+		          //{ "Input1", new EntityReference("entity", Guid.NewGuid()) },
+		          //{ "Input2", "test" }
+	          };
+
+	          //Expected value(s)
+	          const string expected = null;
+
+	          //Invoke the workflow
+	          var output = InvokeWorkflow(_namespaceClassAssembly, ref targetEntity, inputs);
+
+	          //Test(s)
+	          Assert.AreEqual(expected, null);
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,17 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <ProjectType>CSharp</ProjectType>
+
+    <DefaultName>WorkflowClass.cs</DefaultName>
+    <Name>CRM Workflow Class</Name>
+    <Description>Dynamics CRM Workflow Class</Description>
+    <Icon>icon.png</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+
+    <ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">WorkflowClass1.cs</ProjectItem>
+
+  </TemplateContent>
+</VSTemplate>

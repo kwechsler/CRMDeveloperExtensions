@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Get Grid Entity Name (7.1+)</Title>
+      <Shortcut>CRMGetGridEntityName</Shortcut>
+      <Description>Use this method to get the logical name of the entity data displayed in the grid.</Description>
+      <HelpUrl>https://msdn.microsoft.com/en-us/library/dn932126.aspx#BKMK_GridControlGetEntityName</HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Subgrid</Keyword>
+        <Keyword>2015</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="JavaScript">
+        <![CDATA[Xrm.Page.getControl("controlname").getEntityName()$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

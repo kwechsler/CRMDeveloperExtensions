@@ -1,0 +1,22 @@
+﻿<Window x:Class="TemplateMenuCommands.ClassNamer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        mc:Ignorable="d" Height="222" Width="300" d:DesignWidth="300" Background="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Title="CRM Developer Extensions">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="222" />
+        </Grid.RowDefinitions>
+        <TextBox x:Name="NewFileName" HorizontalAlignment="Left" Height="23" Margin="54,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" TextChanged="NewFileName_TextChanged"/>
+        <Button x:Name="CreateFile" Content="Create" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top" Width="200" Click="CreateFile_Click"
+                Grid.Row="0" Height="22" />
+        <Image HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="32" Source="Resources/sw-file-icon.png"/>
+        <Label Grid.Row="0" Content="File Name" HorizontalAlignment="Left" Margin="50,17,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="200" Grid.ColumnSpan="2"/>
+        <Label x:Name="Extension" Content=".cs" HorizontalAlignment="Left" Margin="217,48,0,0" VerticalAlignment="Top" Height="28" Width="38"/>
+        <Label x:Name="LblTest" Grid.Row="0" Content="Unit Test Type" HorizontalAlignment="Left" Margin="54,76,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="196" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="Unit" Content="Unit" HorizontalAlignment="Left" Margin="50,107,0,0" VerticalAlignment="Top" Width="58" GroupName="TestType" IsChecked="True" Checked="Unit_Checked"/>
+        <RadioButton x:Name="Integration" Content="Integration" HorizontalAlignment="Left" Margin="171,107,0,0" VerticalAlignment="Top" Width="84" GroupName="TestType" Checked="Integration_Checked"/>
+
+    </Grid>
+</Window>

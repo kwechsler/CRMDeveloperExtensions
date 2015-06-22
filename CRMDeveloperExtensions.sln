@@ -1,0 +1,73 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMDeveloperExtensions", "CRMDeveloperExtensions\CRMDeveloperExtensions.csproj", "{A4FDB41F-E97D-42FC-BF45-E762A4F87F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateWizards", "TemplateWizards\TemplateWizards.csproj", "{4F1D342A-3F47-485C-888F-B85E54A8662B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMenuCommands", "TemplateMenuCommands\TemplateMenuCommands.csproj", "{3BBF0AA0-B8E1-489D-B155-DA570E1B8433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserOptions", "UserOptions\UserOptions.csproj", "{75D1747A-598A-48F9-927C-381BEDC355E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project Templates", "Project Templates", "{03259B5D-4711-48F0-A39F-1F8B28418D0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMPluginProject", "Project Templates\CRMPluginProject\CRMPluginProject.csproj", "{56E63E6D-35E9-48B5-A549-1321610F197A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMPluginUnitTestProject", "Project Templates\CRMPluginUnitTestProject\CRMPluginUnitTestProject.csproj", "{CBE6269C-2B9B-460C-9AE1-89DA739B30A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSimpleConsole", "Project Templates\CRMSimpleConsole\CRMSimpleConsole.csproj", "{89C0A8D4-D301-4789-BE22-0CFD7BDEAFA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMWebResourceProject", "Project Templates\CRMWebResourceProject\CRMWebResourceProject.csproj", "{68670149-40FE-4EA9-A624-572B2C595F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMWorkflowProject", "Project Templates\CRMWorkflowProject\CRMWorkflowProject.csproj", "{2110F684-C277-47E7-B8B9-6F17A579D0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMWorkflowUnitTestProject", "Project Templates\CRMWorkflowUnitTestProject\CRMWorkflowUnitTestProject.csproj", "{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4FDB41F-E97D-42FC-BF45-E762A4F87F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4FDB41F-E97D-42FC-BF45-E762A4F87F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4FDB41F-E97D-42FC-BF45-E762A4F87F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4FDB41F-E97D-42FC-BF45-E762A4F87F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F1D342A-3F47-485C-888F-B85E54A8662B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1D342A-3F47-485C-888F-B85E54A8662B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1D342A-3F47-485C-888F-B85E54A8662B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1D342A-3F47-485C-888F-B85E54A8662B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBF0AA0-B8E1-489D-B155-DA570E1B8433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBF0AA0-B8E1-489D-B155-DA570E1B8433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBF0AA0-B8E1-489D-B155-DA570E1B8433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBF0AA0-B8E1-489D-B155-DA570E1B8433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75D1747A-598A-48F9-927C-381BEDC355E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D1747A-598A-48F9-927C-381BEDC355E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D1747A-598A-48F9-927C-381BEDC355E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D1747A-598A-48F9-927C-381BEDC355E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E63E6D-35E9-48B5-A549-1321610F197A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E63E6D-35E9-48B5-A549-1321610F197A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE6269C-2B9B-460C-9AE1-89DA739B30A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE6269C-2B9B-460C-9AE1-89DA739B30A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C0A8D4-D301-4789-BE22-0CFD7BDEAFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C0A8D4-D301-4789-BE22-0CFD7BDEAFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68670149-40FE-4EA9-A624-572B2C595F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68670149-40FE-4EA9-A624-572B2C595F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2110F684-C277-47E7-B8B9-6F17A579D0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2110F684-C277-47E7-B8B9-6F17A579D0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{56E63E6D-35E9-48B5-A549-1321610F197A} = {03259B5D-4711-48F0-A39F-1F8B28418D0A}
+		{CBE6269C-2B9B-460C-9AE1-89DA739B30A8} = {03259B5D-4711-48F0-A39F-1F8B28418D0A}
+		{89C0A8D4-D301-4789-BE22-0CFD7BDEAFA0} = {03259B5D-4711-48F0-A39F-1F8B28418D0A}
+		{68670149-40FE-4EA9-A624-572B2C595F69} = {03259B5D-4711-48F0-A39F-1F8B28418D0A}
+		{2110F684-C277-47E7-B8B9-6F17A579D0CE} = {03259B5D-4711-48F0-A39F-1F8B28418D0A}
+		{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9} = {03259B5D-4711-48F0-A39F-1F8B28418D0A}
+	EndGlobalSection
+EndGlobal

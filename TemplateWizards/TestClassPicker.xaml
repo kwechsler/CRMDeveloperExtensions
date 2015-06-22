@@ -1,0 +1,17 @@
+﻿<Window x:Class="TemplateWizards.TestClassPicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"  Height="222" Width="300" d:DesignWidth="300" Background="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Title="CRM Developer Extensions">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="222" />
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Row="0" x:Name="ProjectClass" HorizontalAlignment="Left" Margin="8,52,8,0" VerticalAlignment="Top" Width="268" />
+        <Label Grid.Row="0" Content="Choose The Class To Test" HorizontalAlignment="Left" Margin="50,17,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="200"/>
+        <Button x:Name="CreateItem" Content="Create Item" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top" Width="200" Click="CreateItem_Click"
+                Grid.Row="0" Height="22" />
+        <Image Grid.Row="0" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="32" Source="Images/sw-file-icon.png"/>
+    </Grid>
+</Window>

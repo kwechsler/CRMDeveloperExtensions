@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Set Grid Current View (7.1+)</Title>
+      <Shortcut>CRMSetGridCurrentView</Shortcut>
+      <Description>Use this method to set the current view.</Description>
+      <HelpUrl>https://msdn.microsoft.com/en-us/library/dn932126.aspx#BKMK_ViewSelectorSetCurrentView_</HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Subgrid</Keyword>
+        <Keyword>2015</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="JavaScript">
+        <![CDATA[var contactSavedQuery = {
+           entityType: 1039, // SavedQuery
+           id:"3A282DA1-5D90-E011-95AE-00155D9CFA02", 
+           name: "Contacts Saved Query"
+          }
+          
+          Xrm.Page.getControl("controlname").getViewSelector().setCurrentView(contactSavedQuery);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

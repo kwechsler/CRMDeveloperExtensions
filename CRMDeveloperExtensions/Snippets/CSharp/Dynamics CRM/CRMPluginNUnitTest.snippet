@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Plug-in NUnit Test</Title>
+      <Shortcut>CRMPluginNUT</Shortcut>
+      <Description>Creates a Dynamics CRM plug-in NUnit test.</Description>
+      <HelpUrl></HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Unit Test</Keyword>
+        <Keyword>Plug-in</Keyword>
+        <Keyword>NUnit</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[[Test]
+        public void TestMethod1()
+        {
+	          //Target
+            Entity targetEntity = new Entity { LogicalName = "name", Id = Guid.NewGuid() };
+
+            #region Optional Images/Configs
+            //Optional Pre/Post Images - configure as needed
+            Entity preImage = null; //new Entity { LogicalName = "name", Id = Guid.NewGuid() };
+            Entity postImage = null; //new Entity { LogicalName = "name", Id = Guid.NewGuid() };
+
+            //Optional Secure/Unsecure Configurations - configure as needed
+             string unsecureConfig = String.Empty;
+            string secureConfig = String.Empty;
+            #endregion
+
+            //Expected value(s)
+            const string expected = null;
+
+            //Invoke the plug-in
+            InvokePlugin(_namespaceClassAssembly, ref targetEntity, preImage, postImage, unsecureConfig, secureConfig, null);
+
+            //Test(s)
+            Assert.AreEqual(expected, null);
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

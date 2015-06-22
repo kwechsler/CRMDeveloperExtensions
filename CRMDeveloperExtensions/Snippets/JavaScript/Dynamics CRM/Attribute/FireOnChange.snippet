@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Fire OnChange (5.0+)</Title>
+      <Shortcut>CRMFireOnChange</Shortcut>
+      <Description>Causes the OnChange event to occur on the attribute so that any script associated to that event can execute.</Description>
+      <HelpUrl>https://msdn.microsoft.com/en-us/library/gg334409.aspx#BKMK_fireOnChange</HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Attribute</Keyword>
+        <Keyword>2011</Keyword>
+        <Keyword>2013</Keyword>
+        <Keyword>2015</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="JavaScript">
+        <![CDATA[Xrm.Page.getAttribute("fieldname").fireOnChange()$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

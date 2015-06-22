@@ -1,0 +1,52 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             x:Class="JasonLattimer.WebResourceDeployer.WebResourceList" 
+             Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="1000"
+             x:Name="MyToolWindow">
+    <Grid>
+        <Button x:Name="AddConnection" Content="Add" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="44" Click="AddConnection_Click"/>
+        <ComboBox x:Name="Connections" DisplayMemberPath="Name" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="Connections_SelectionChanged"/>
+        <ComboBox x:Name="Projects" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="Projects_SelectionChanged"/>
+        <Button x:Name="Connect" Content="Connect" HorizontalAlignment="Left" Margin="135,77,0,0" VerticalAlignment="Top" Width="75" Click="Connect_Click" IsEnabled="False"/>
+        <DataGrid x:Name="WebResourceGrid" HorizontalAlignment="Left" Margin="215,37,0,0" VerticalAlignment="Top"  CanUserResizeRows="False" RowHeaderWidth="0"
+                  Height="303" Width="775" AutoGenerateColumns="False" CanUserAddRows="False" RowHeight="24" IsEnabled="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Visibility="Hidden" Binding="{Binding WebResourceId}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Type">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Image}" Width="16" Height="16"></Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding Type}" IsReadOnly="True" Visibility="Hidden"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Header="Publish" CanUserSort="False" Binding="{Binding Publish, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DataGridCheckBoxColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Mapped To" x:Name="FileListColumn">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Path=ProjectFiles}" SelectedValuePath="Content" SelectedValue="{Binding Path=BoundFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="#FF333337"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Get From CRM" SortMemberPath="BoundFile" CanUserSort="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Get" x:Name="GetWebResource" Click="GetWebResource_OnClick" CommandParameter="{Binding WebResourceId}"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="WebResourceType" HorizontalAlignment="Left" Margin="318,10,0,0" VerticalAlignment="Top" Width="174" SelectionChanged="WebResourceType_SelectionChanged" IsEnabled="False"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="260,10,0,0" VerticalAlignment="Top" Height="29"/>
+        <Button x:Name="Publish" Content="Publish" HorizontalAlignment="Left" Margin="513,10,0,0" VerticalAlignment="Top" Width="75" Click="Publish_Click" IsEnabled="False"/>
+        <Button x:Name="ModifyConnection" Content="Modify" HorizontalAlignment="Left" Margin="60,77,0,0" VerticalAlignment="Top" Width="70" Click="ModifyConnection_Click" IsEnabled="False"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="75" Click="Delete_Click" IsEnabled="False"/>
+    </Grid>
+</UserControl>

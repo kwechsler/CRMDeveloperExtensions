@@ -1,0 +1,24 @@
+﻿<Window x:Class="JasonLattimer.WebResourceDeployer.Connection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Connection" Height="300" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300" />
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Row="0" Content="Connect" Click="Connect_Click" x:Name="Connect" Margin="10,227,10,52"  />
+        <Label x:Name="LblTitle" Content="Connect to Dynamics CRM" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        <Label x:Name="LblConnectionString" Content="Connection String" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="ConnString" HorizontalAlignment="Left" Height="59" Margin="10,131,0,0" TextWrapping="Wrap" Text="https://[orgname].crm.dynamics.com; Username=crmadmin@contoso.onmicrosoft.com; Password=password;" VerticalAlignment="Top" Width="272"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Height="23" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
+        <ComboBox x:Name="ConnectionType" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="ConnectionType_SelectionChanged">
+            <ComboBoxItem Content="Online using Office 365" IsSelected="True"/>
+            <ComboBoxItem Content="On-premises with provided user credentials"/>
+            <ComboBoxItem Content="On-premises using Windows integrated security"/>
+            <ComboBoxItem Content="On-Premises (IFD) with claims"/>
+        </ComboBox>
+
+    </Grid>
+</Window>

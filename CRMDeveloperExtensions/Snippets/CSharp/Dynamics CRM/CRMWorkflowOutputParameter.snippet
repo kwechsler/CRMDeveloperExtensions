@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CRM Workflow Output Parameter</Title>
+      <Shortcut>CRMWFOutput</Shortcut>
+      <Description>Creates a Dynamics CRM custom workflow output parameter.</Description>
+      <HelpUrl></HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Output</Keyword>
+        <Keyword>Output Parameter</Keyword>
+        <Keyword>Workflow</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[[OutputAttribute("CRM Display Text")]
+        public OutArgument<DataType> OutputParameterName { get; set; }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

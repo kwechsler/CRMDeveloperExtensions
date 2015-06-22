@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Add Custom View (5.0+)</Title>
+      <Shortcut>CRMAddCustomView</Shortcut>
+      <Description>Adds a new view for the lookup dialog box.</Description>
+      <HelpUrl>https://msdn.microsoft.com/en-us/library/gg334266.aspx#BKMK_addCustomView</HelpUrl>
+      <Author>Jason Lattimer</Author>
+      <Keywords>
+        <Keyword>Dynamics CRM</Keyword>
+        <Keyword>CRM</Keyword>
+        <Keyword>Control</Keyword>
+        <Keyword>2011</Keyword>
+        <Keyword>2013</Keyword>
+        <Keyword>2015</Keyword>
+      </Keywords>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="JavaScript">
+        <![CDATA[var viewId = "F0EE06F5-BB78-465F-BADA-FC3F5CF05300";
+        var entityName = "account";
+        var viewDisplayName = "Custom View";
+        var fetchXml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>" +
+                        "<entity name='account'>" +
+                        "<attribute name='name' />" +
+                        "<attribute name='accountid' />" +
+                        "<filter type='and'>" +
+                        "<condition attribute='name' operator='eq' value='test' />" +
+                        "</filter>" +
+                        "</entity>" +
+                        "</fetch>";
+
+        var layoutXml = "<grid name='resultset' object='1' jump='accountid' select='1' icon='1' preview='1'>" +
+                        "<row name='result' id='accountid'>" +
+                        "<cell name='name' width='150' />" +
+                        "</row>" +
+                        "</grid>";
+        var isDefault = true;
+
+        Xrm.Page.getControl("fieldname").addCustomView(viewId, entityName, viewDisplayName, fetchXml, layoutXml, isDefault);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,35 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>CRM Console Application</Name>
+    <Description>Dynamics CRM Console Application</Description>
+    <DefaultName>CRMSimpleConsole</DefaultName>
+
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>sw-file-icon.png</Icon>
+
+    <!-- Indicates how many parent folders this item template should appear in -->
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="CRMSimpleConsole.csproj" File="CRMSimpleConsole.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="2" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1" TargetFileName="App.config">App.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+    <FullClassName>TemplateWizards.VersionWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <!--Valid values are Plug-in or Workflow or Item-->
+    <CRMProjectType>Plug-in</CRMProjectType>
+    <NeedsClient>True</NeedsClient>
+    <IsUnitTest>False</IsUnitTest>
+  </WizardData>
+</VSTemplate>
