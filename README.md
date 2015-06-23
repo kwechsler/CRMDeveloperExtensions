@@ -8,23 +8,28 @@ The project and item templates are based on the SideWaffle project
 
 **Templates**
 
-Plug-in - Project Template    
-Plug-in Class - Item Template   
-Plug-in Test - Project Template   
-Plug-in Unit Test (MS Test) - Item Template   
-Plug-in Integration Test (MS Test) - Item Template   
-Plug-in Unit Test (NUnit) - Item Template   
-Plug-in Integration Test (NUnit) - Item Template   
-Custom Workflow Activity - Project Template   
-Custom Workflow Activity - Item Template   
-Custom Workflow Activity Test - Project Template   
-Custom Workflow Activity Unit Test (MS Test) - Item Template   
-Custom Workflow Activity Integration Test (MS Test) - Item Template   
-Custom Workflow Activity Unit Test (NUnit) - Item Template   
-Custom Workflow Activity Integration Test (NUnit) - Item Template   
-Web Resource - Project Template   
-JavaScript - Item Template   
-HTML - Item Template   
+Project Templates
+
+* Plug-in   
+* Plug-in Test   
+* Custom Workflow Activity   
+* Custom Workflow Activity Test   
+* Web Resource   
+
+Item Templates
+
+* Plug-in Class   
+* Plug-in Unit Test (MSTest)   
+* Plug-in Integration Test (MSTest)   
+* Plug-in Unit Test (NUnit)   
+* Plug-in Integration Test (NUnit)   
+* Custom Workflow Activity   
+* Custom Workflow Activity Unit Test (MSTest)   
+* Custom Workflow Activity Integration Test (MSTest)   
+* Custom Workflow Activity Unit Test (NUnit)   
+* Custom Workflow Activity Integration Test (NUnit)   
+* JavaScript (Module) Web Resource   
+* HTML Web Resource     
 
 You can take a look at how the templates will be implemented here:
 
