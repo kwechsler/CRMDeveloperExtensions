@@ -20,7 +20,7 @@ namespace TemplateWizards
         [DllImport("mscoree.dll")]
         internal extern static int StrongNameFreeBuffer(IntPtr pbMemory);
         [DllImport("mscoree.dll", CharSet = CharSet.Unicode, ExactSpelling = true)]
-        internal static extern int StrongNameKeyGen(IntPtr wszKeyContainer, uint dwFlags, out IntPtr KeyBlob, out uint KeyBlobSize);
+        internal static extern int StrongNameKeyGen(IntPtr wszKeyContainer, uint dwFlags, out IntPtr keyBlob, out uint keyBlobSize);
         [DllImport("mscoree.dll", CharSet = CharSet.Unicode)]
         internal static extern int StrongNameErrorInfo();
 
