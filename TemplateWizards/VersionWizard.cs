@@ -193,6 +193,8 @@ namespace TemplateWizards
             }
             else
                 AddSetting(project, "CRMTestType", "UNIT");
+
+            ExcludePerformaceFolder(project);
         }
 
         /// <summary>
@@ -494,6 +496,23 @@ namespace TemplateWizards
                 if (itemType.ToUpper() == "{6BB5F8EF-4483-11D3-8BCF-00C04F8EC28C}") //GUID_ItemType_PhysicalFolder
                 {
                     if (project.ProjectItems.Item(i).Name.ToUpper() == "BIN")
+                        project.ProjectItems.Item(i).Remove();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Excludes the performance folder which appears in VS2015
+        /// </summary>
+        /// <param name="project">The target project.</param>
+        private static void ExcludePerformaceFolder(Project project)
+        {
+            for (int i = 1; i < project.ProjectItems.Count; i++)
+            {
+                string itemType = project.ProjectItems.Item(i).Kind;
+                if (itemType.ToUpper() == "{6BB5F8EF-4483-11D3-8BCF-00C04F8EC28C}") //GUID_ItemType_PhysicalFolder
+                {
+                    if (project.ProjectItems.Item(i).Name.ToUpper() == "PERFORMANCE")
                         project.ProjectItems.Item(i).Remove();
                 }
             }
