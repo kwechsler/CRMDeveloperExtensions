@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell;
 using Window = EnvDTE.Window;
 
-namespace JasonLattimer.WebResourceDeployer
+namespace WebResourceDeployer
 {
     /// <summary>
     /// This class implements the tool window exposed by this package and hosts a user control.

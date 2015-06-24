@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 
-namespace JasonLattimer.WebResourceDeployer.Models
+namespace WebResourceDeployer.Models
 {
     class WebResourceItem : INotifyPropertyChanged
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace JasonLattimer.WebResourceDeployer.Models
+namespace WebResourceDeployer.Models
 {
     public class CrmConn
     {

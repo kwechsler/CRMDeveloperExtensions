@@ -5,7 +5,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace JasonLattimer.WebResourceDeployer
+namespace WebResourceDeployer
 {
     public partial class Connection
     {

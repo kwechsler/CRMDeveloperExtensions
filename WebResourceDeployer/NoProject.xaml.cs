@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JasonLattimer.WebResourceDeployer
+namespace WebResourceDeployer
 {
     /// <summary>
     /// Interaction logic for NoProject.xaml

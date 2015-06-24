@@ -2,7 +2,7 @@
 // MUST match guids.h
 using System;
 
-namespace JasonLattimer.WebResourceDeployer
+namespace WebResourceDeployer
 {
     static class GuidList
     {

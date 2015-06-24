@@ -1,6 +1,6 @@
 ﻿using EnvDTE;
 using EnvDTE80;
-using JasonLattimer.WebResourceDeployer.Models;
+using WebResourceDeployer.Models;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.Xrm.Client;
@@ -20,10 +20,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Xml;
 
-namespace JasonLattimer.WebResourceDeployer
+namespace WebResourceDeployer
 {
     public partial class WebResourceList
     {
+        //All these DTE objects need to be declared here or else things stop working
         private readonly DTE _dte;
         private readonly Solution _solution;
         private readonly Events _events;
@@ -246,7 +247,7 @@ namespace JasonLattimer.WebResourceDeployer
         {
             var path = Path.GetDirectoryName(vsProject.FullName);
             XmlDocument doc = new XmlDocument();
-            doc.Load(path + "\\WebResourceDeployer.config");
+            doc.Load(path + "\\CRMDeveloperExtensions.config");
 
             //Check if connection alredy exists for project
             XmlNodeList connectionStrings = doc.GetElementsByTagName("ConnectionString");
@@ -278,7 +279,7 @@ namespace JasonLattimer.WebResourceDeployer
                             versionU.InnerText = versionNum;
                     }
 
-                    doc.Save(path + "\\WebResourceDeployer.config");
+                    doc.Save(path + "\\CRMDeveloperExtensions.config");
                     return true;
                 }
             }
@@ -300,7 +301,7 @@ namespace JasonLattimer.WebResourceDeployer
             connection.AppendChild(version);
             connections[0].AppendChild(connection);
 
-            doc.Save(path + "\\WebResourceDeployer.config");
+            doc.Save(path + "\\CRMDeveloperExtensions.config");
             return true;
         }
 
@@ -315,13 +316,13 @@ namespace JasonLattimer.WebResourceDeployer
             doc.AppendChild(webResourceDeployer);
 
             var path = Path.GetDirectoryName(vsProject.FullName);
-            doc.Save(path + "/WebResourceDeployer.config");
+            doc.Save(path + "/CRMDeveloperExtensions.config");
         }
 
         private bool ConfigFileExists(Project project)
         {
             var path = Path.GetDirectoryName(project.FullName);
-            return File.Exists(path + "/WebResourceDeployer.config");
+            return File.Exists(path + "/CRMDeveloperExtensions.config");
         }
 
         private Project GetProjectByName(string projectName)
@@ -381,10 +382,10 @@ namespace JasonLattimer.WebResourceDeployer
             var path = Path.GetDirectoryName(vsProject.FullName);
             XmlDocument doc = new XmlDocument();
 
-            if (!File.Exists(path + "\\WebResourceDeployer.config"))
+            if (!File.Exists(path + "\\CRMDeveloperExtensions.config"))
                 return;
 
-            doc.Load(path + "\\WebResourceDeployer.config");
+            doc.Load(path + "\\CRMDeveloperExtensions.config");
             XmlNodeList connections = doc.GetElementsByTagName("Connection");
             if (connections.Count == 0) return;
 
@@ -600,7 +601,7 @@ namespace JasonLattimer.WebResourceDeployer
 
             var path = Path.GetDirectoryName(project.FullName);
             XmlDocument doc = new XmlDocument();
-            doc.Load(path + "\\WebResourceDeployer.config");
+            doc.Load(path + "\\CRMDeveloperExtensions.config");
 
             XmlNodeList mappedFiles = doc.GetElementsByTagName("File");
             List<XmlNode> nodesToRemove = new List<XmlNode>();
@@ -637,7 +638,7 @@ namespace JasonLattimer.WebResourceDeployer
                 if (files != null && files.ParentNode != null)
                     files.RemoveChild(xmlNode);
             }
-            doc.Save(path + "\\WebResourceDeployer.config");
+            doc.Save(path + "\\CRMDeveloperExtensions.config");
 
             return wrItems;
         }
@@ -665,7 +666,7 @@ namespace JasonLattimer.WebResourceDeployer
             var project = (Project)((ComboBoxItem)Projects.SelectedItem).Tag;
             var projectPath = Path.GetDirectoryName(project.FullName);
             XmlDocument doc = new XmlDocument();
-            doc.Load(projectPath + "\\WebResourceDeployer.config");
+            doc.Load(projectPath + "\\CRMDeveloperExtensions.config");
 
             //Update or delete existing mapping
             XmlNodeList fileNodes = doc.GetElementsByTagName("File");
@@ -696,7 +697,7 @@ namespace JasonLattimer.WebResourceDeployer
                             path.InnerText = item.BoundFile;
                     }
 
-                    doc.Save(projectPath + "\\WebResourceDeployer.config");
+                    doc.Save(projectPath + "\\CRMDeveloperExtensions.config");
                     return;
                 }
             }
@@ -720,7 +721,7 @@ namespace JasonLattimer.WebResourceDeployer
                 file.AppendChild(webResourceName);
                 files[0].AppendChild(file);
 
-                doc.Save(projectPath + "\\WebResourceDeployer.config");
+                doc.Save(projectPath + "\\CRMDeveloperExtensions.config");
             }
         }
 
@@ -867,6 +868,12 @@ namespace JasonLattimer.WebResourceDeployer
 
         private void Connections_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            List<WebResourceItem> items = (List<WebResourceItem>)WebResourceGrid.ItemsSource;
+            foreach (WebResourceItem webResourceItem in items)
+            {
+                webResourceItem.Publish = false;
+            }
+
             CrmConn conn = (CrmConn)Connections.SelectedItem;
             if (conn != null)
             {

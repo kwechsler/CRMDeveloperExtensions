@@ -2,7 +2,7 @@
 // MUST match PkgCmdID.h
 using System;
 
-namespace JasonLattimer.WebResourceDeployer
+namespace WebResourceDeployer
 {
     static class PkgCmdIDList
     {
