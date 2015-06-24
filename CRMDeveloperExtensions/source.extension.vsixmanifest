@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="CRMDeveloperExtensions..697f2464-985a-4218-b671-08d51a2e113b" Version="1.0.0.0" Language="en-US" Publisher="Jason Lattimer" />
+    <Identity Id="CRMDeveloperExtensions..697f2464-985a-4218-b671-08d51a2e113b" Version="1.0.1.0" Language="en-US" Publisher="Jason Lattimer" />
     <DisplayName>Dynamics CRM Developer Extensions</DisplayName>
     <Description xml:space="preserve">Dynamics CRM 2011/2013/2015 Developer Extensions</Description>
     <MoreInfo>https://github.com/jlattimer/CRMDeveloperExtensions</MoreInfo>
