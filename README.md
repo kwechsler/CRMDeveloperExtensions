@@ -35,6 +35,8 @@ You can take a look at how the templates will be implemented here:
 
 https://www.youtube.com/watch?t=47&v=NV9T_0F6HM0
 
+Review the Wiki for additional documentation on using the templates.
+
 **Code Snippets**
 
 Currently there are JavaScript snippets the majority of the 2011, 2013, and 2015 Dynamics CRM Client SDK. On the .NET side there are some snippets to add input and output parameters to custom workflow assemblies along with some snippets to assist in creating unit tests.
