@@ -1,10 +1,14 @@
 Dynamics CRM Developer Extensions
 
-**This is still a work in progress while I work out a few issues and finish the documentation**
+**Goal**
 
 The goal of this project is to be an alternative to the CRM Developer Toolkit that shipped with the Dynamics CRM 2011 & 2013 SDK. Initially it will contain templates and code snippets to help jump start the development process but eventually will expand to include other tooling to help streamline the process of getting and deploying web resources as well as plug-ins and custom workflow activities. Supported versions of Visual Studio will include 2012, 2013, & 2015 and will be distributed via the Visual Studio Gallery.
 
 The project and item templates are based on the [SideWaffle](http://sidewaffle.com/) project.
+
+**Installation**
+
+Install in Visual Studio under Tools -> Extensions and Updates -> Search Online for "Dynamics CRM Developer Extensions" or install directly from the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/0f9ab063-acec-4c55-bd6c-5eb7c6cffec4).
 
 **Templates**
 
