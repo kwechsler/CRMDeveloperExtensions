@@ -35,7 +35,7 @@ You can take a look at how the templates will be implemented here:
 
 https://www.youtube.com/watch?t=47&v=NV9T_0F6HM0
 
-Review the Wiki for additional documentation on using the templates.
+Review the [Wiki](https://github.com/jlattimer/CRMDeveloperExtensions/wiki) for additional documentation on using the templates.
 
 **Code Snippets**
 
