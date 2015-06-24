@@ -37,7 +37,7 @@ https://www.youtube.com/watch?t=47&v=NV9T_0F6HM0
 
 **Code Snippets**
 
-Currently there are JavaScript snippets the majority of the 2011, 2013, and 2015 Dynamics CRM Client SDK. On the .NET side there are some snippets to add input and out parameters to custom workflow assemblies along with some snippets to assist in creating unit tests.
+Currently there are JavaScript snippets the majority of the 2011, 2013, and 2015 Dynamics CRM Client SDK. On the .NET side there are some snippets to add input and output parameters to custom workflow assemblies along with some snippets to assist in creating unit tests.
 
 The first piece of additional tooling that is being developed is a cross between the functionality in the old Developer Toolkit which allowed you to download web resource files from CRM into your project and the Web Resource Linker/Publisher from CodePlex which allowed deploying web resources from Visual Studio.
 
