@@ -54,3 +54,5 @@ https://www.youtube.com/watch?v=9zZiyf1ylGE
 Eventually there will be some functionality to help deploy custom assemblies from Visual Studio. I haven't thought this all the way through yet but currently I'm leaning toward still using the plug-in registration tool to do the initial deployment and creation of steps, images, etc... and then build something to update the assemblies when needed. The plug-in registration tool could be recreated inside Visual Studio but I'm not sure the effort to so would realistically save and significant amount of time.
 
 If you have ideas for new templates or tools please post them in the issues area.
+
+Feel free to [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KGV72FKEY8TJL) if this saved you some time or helped out :)
