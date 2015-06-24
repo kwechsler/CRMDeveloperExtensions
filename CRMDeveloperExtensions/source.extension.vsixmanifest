@@ -21,6 +21,5 @@
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="snippets.pkgdef" />
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="UserOptions" Path="|UserOptions;PkgdefProjectOutputGroup|" />
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="TemplateMenuCommands" Path="|TemplateMenuCommands;PkgdefProjectOutputGroup|" />
-    <Asset Type="Microsoft.VisualStudio.ToolboxControl" d:Source="Project" d:ProjectName="WebResourceDeployer" Path="|WebResourceDeployer;PkgdefProjectOutputGroup|" />
   </Assets>
 </PackageManifest>
