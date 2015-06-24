@@ -65,13 +65,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ItemTemplates\Code\Plugin Class\PluginClass1.cs" />
-    <Compile Include="ItemTemplates\Code\Plugin NUnit Integration Test\NIntegrationTest1.cs" />
-    <Compile Include="ItemTemplates\Code\Plugin Integration Test\IntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Plugin NUnit Int Test\NIntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Plugin Int Test\IntegrationTest1.cs" />
     <Compile Include="ItemTemplates\Code\Plugin NUnit Test\NUnitTest1.cs" />
     <Compile Include="ItemTemplates\Code\Plugin Unit Test\UnitTest1.cs" />
     <Compile Include="ItemTemplates\Code\Workflow Class\WorkflowClass1.cs" />
-    <Compile Include="ItemTemplates\Code\Workflow NUnit Integration Test\NIntegrationTest1.cs" />
-    <Compile Include="ItemTemplates\Code\Workflow Integration Test\IntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow NUnit Int Test\NIntegrationTest1.cs" />
+    <Compile Include="ItemTemplates\Code\Workflow Int Test\IntegrationTest1.cs" />
     <Compile Include="ItemTemplates\Code\Workflow NUnit Test\NUnitTest1.cs" />
     <Compile Include="ItemTemplates\Code\Workflow Unit Test\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -294,36 +294,36 @@
     </TemplateReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ItemTemplates\Code\Plugin NUnit Integration Test\Definitions\CSharp.vstemplate" />
-    <Content Include="ItemTemplates\Code\Plugin NUnit Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Plugin NUnit Int Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin NUnit Int Test\icon.png" />
     <Content Include="ItemTemplates\Code\Plugin NUnit Test\Definitions\CSharp.vstemplate" />
     <Content Include="ItemTemplates\Code\Plugin NUnit Test\icon.png" />
-    <Content Include="ItemTemplates\Code\Workflow NUnit Integration Test\Definitions\CSharp.vstemplate" />
-    <Content Include="ItemTemplates\Code\Workflow NUnit Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow NUnit Int Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow NUnit Int Test\icon.png" />
     <Content Include="ItemTemplates\Code\Workflow NUnit Test\Definitions\CSharp.vstemplate" />
     <Content Include="ItemTemplates\Code\Workflow NUnit Test\icon.png" />
-    <Content Include="ItemTemplates\Web\HTML Web Resource\Definitions\CSharp.vstemplate" />
-    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\HTML Web\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\JavaScript Web\Definitions\CSharp.vstemplate" />
     <Content Include="snippets.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ItemTemplates\Web\HTML Web Resource\Definitions\Web.csharp.vstemplate" />
-    <Content Include="ItemTemplates\Web\HTML Web Resource\icon.png" />
-    <Content Include="ItemTemplates\Web\HTML Web Resource\My_Html1.html" />
-    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\Definitions\Web.csharp.vstemplate" />
-    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\icon.png" />
-    <Content Include="ItemTemplates\Web\JavaScript %28Module%29 Web Resource\My_Script1.js" />
+    <Content Include="ItemTemplates\Web\HTML Web\Definitions\Web.csharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\HTML Web\icon.png" />
+    <Content Include="ItemTemplates\Web\HTML Web\My_Html1.html" />
+    <Content Include="ItemTemplates\Web\JavaScript Web\Definitions\Web.csharp.vstemplate" />
+    <Content Include="ItemTemplates\Web\JavaScript Web\icon.png" />
+    <Content Include="ItemTemplates\Web\JavaScript Web\My_Script1.js" />
     <Content Include="ItemTemplates\Code\Plugin Class\Definitions\CSharp.vstemplate" />
     <Content Include="ItemTemplates\Code\Plugin Class\icon.png" />
-    <Content Include="ItemTemplates\Code\Plugin Integration Test\Definitions\CSharp.vstemplate" />
-    <Content Include="ItemTemplates\Code\Plugin Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Plugin Int Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Plugin Int Test\icon.png" />
     <Content Include="ItemTemplates\Code\Plugin Unit Test\Definitions\CSharp.vstemplate" />
     <Content Include="ItemTemplates\Code\Plugin Unit Test\icon.png" />
     <Content Include="ItemTemplates\Code\Workflow Class\Definitions\CSharp.vstemplate" />
     <Content Include="ItemTemplates\Code\Workflow Class\icon.png" />
-    <Content Include="ItemTemplates\Code\Workflow Integration Test\Definitions\CSharp.vstemplate" />
-    <Content Include="ItemTemplates\Code\Workflow Integration Test\icon.png" />
+    <Content Include="ItemTemplates\Code\Workflow Int Test\Definitions\CSharp.vstemplate" />
+    <Content Include="ItemTemplates\Code\Workflow Int Test\icon.png" />
     <Content Include="ItemTemplates\Code\Workflow Unit Test\Definitions\CSharp.vstemplate" />
     <Content Include="ItemTemplates\Code\Workflow Unit Test\icon.png" />
     <Content Include="License.txt">
@@ -349,6 +349,12 @@
     <ProjectReference Include="..\UserOptions\UserOptions.csproj">
       <Project>{75D1747A-598A-48F9-927C-381BEDC355E6}</Project>
       <Name>UserOptions</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\WebResourceDeployer\WebResourceDeployer.csproj">
+      <Project>{62E8982D-4308-43BA-BF4A-901DEF8BC7EA}</Project>
+      <Name>WebResourceDeployer</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>

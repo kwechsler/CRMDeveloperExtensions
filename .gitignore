@@ -189,4 +189,4 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 #GhostDoc
-*.GhostDoc.xml
+*GhostDoc.xml

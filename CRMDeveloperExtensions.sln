@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMWorkflowProject", "Proje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMWorkflowUnitTestProject", "Project Templates\CRMWorkflowUnitTestProject\CRMWorkflowUnitTestProject.csproj", "{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebResourceDeployer", "WebResourceDeployer\WebResourceDeployer.csproj", "{62E8982D-4308-43BA-BF4A-901DEF8BC7EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{2110F684-C277-47E7-B8B9-6F17A579D0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BEB2646D-B31B-4E4E-802D-C66FBB5A92C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E8982D-4308-43BA-BF4A-901DEF8BC7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E8982D-4308-43BA-BF4A-901DEF8BC7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E8982D-4308-43BA-BF4A-901DEF8BC7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E8982D-4308-43BA-BF4A-901DEF8BC7EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

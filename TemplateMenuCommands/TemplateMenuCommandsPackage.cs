@@ -247,7 +247,7 @@ namespace TemplateMenuCommands
                                 templateName = "Plugin Unit Test.csharp.zip";
                                 break;
                             case "Integration":
-                                templateName = "Plugin Integration Test.csharp.zip";
+                                templateName = "Plugin Int Test.csharp.zip";
                                 break;
                             default:
                                 return;
@@ -261,7 +261,7 @@ namespace TemplateMenuCommands
                                 templateName = "Plugin NUnit Test.csharp.zip";
                                 break;
                             case "Integration":
-                                templateName = "Plugin NUnit Integration Test.csharp.zip";
+                                templateName = "Plugin NUnit Int Test.csharp.zip";
                                 break;
                             default:
                                 return;
@@ -284,7 +284,7 @@ namespace TemplateMenuCommands
                                 templateName = "Workflow Unit Test.csharp.zip";
                                 break;
                             case "Integration":
-                                templateName = "Workflow Integration Test.csharp.zip";
+                                templateName = "Workflow Int Test.csharp.zip";
                                 break;
                             default:
                                 return;
@@ -298,7 +298,7 @@ namespace TemplateMenuCommands
                                 templateName = "Workflow NUnit Test.csharp.zip";
                                 break;
                             case "Integration":
-                                templateName = "Workflow NUnit Integration Test.csharp.zip";
+                                templateName = "Workflow NUnit Int Test.csharp.zip";
                                 break;
                             default:
                                 return;
@@ -352,7 +352,7 @@ namespace TemplateMenuCommands
             ClassNamer namer = new ClassNamer(_projectType, false, false, "HTML", fileNames);
             bool? fileNamed = namer.ShowDialog();
             if (!fileNamed.HasValue || !fileNamed.Value) return;
-            string templateName = "HTML Web Resource.csharp.zip";
+            string templateName = "HTML Web.csharp.zip";
 
             var item = solution.GetProjectItemTemplate(templateName, "CSharp");
             dte.StatusBar.Text = @"Adding file from template...";
@@ -398,7 +398,7 @@ namespace TemplateMenuCommands
             ClassNamer namer = new ClassNamer(_projectType, false, false, "JS", fileNames);
             bool? fileNamed = namer.ShowDialog();
             if (!fileNamed.HasValue || !fileNamed.Value) return;
-            string templateName = "JavaScript (Module) Web Resource.csharp.zip";
+            string templateName = "JavaScript Web.csharp.zip";
 
             var item = solution.GetProjectItemTemplate(templateName, "CSharp");
             dte.StatusBar.Text = @"Adding file from template...";
